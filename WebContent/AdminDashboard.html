@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Page</title>
+<style>
+
+.left-sidebar {
+  height: 100vh;
+  background-color:#bf373d;
+}
+
+.row{
+  margin-bottom: 0 !important;
+}
+
+.col {
+  padding: 0 !important;
+}
+
+.heading-name{
+  padding-left: 25px;
+  font-style: bold;
+  color: white;
+  padding-top: 20px;
+}
+
+.list-group-item:hover {
+  border-bottom: 2px solid white;
+  left: 0px;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 1s forwards;
+  animation-delay: 2s;
+}
+
+.list-group-item {
+  background-color: black;
+  font-style: bold;
+  font-size: 25px;
+  padding: 10px;
+  color: #fff;
+}
+
+.nav.nav-sidebar.list-group {
+  margin-top: 40px;
+}
+
+.maincontent{
+  margin-top: 45px;
+  padding: 20px 5px;
+}
+
+
+
+@media(max-width : 992px) {
+
+  .left-sidebar {
+      display: none;
+    }
+  
+}</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#header1').load('f2.html');
+	$('#header2').load('AdminNavigation.html');
+	$('#footer1').load('AdminFoot.html');
+});
+</script>
+</head>
+<body>
+<div id="header1"></div>
+<div id="header2"></div>
+<div class="section white-text center" style=" margin-top: 20px;">
+	<div class="row" style="padding: 50px;">
+		<div class="col s12">
+			<a class="dash-btn" href="food-list.php"><div class="sec white white-text" style="margin: 15px; padding: 50px;border: 2px solid white; border-radius: 20px; font-size: 20px; background: linear-gradient(to right, #AF6568, #FA797F);"><font color="white"><center>Item</center></font></div></a>
+			<a class="dash-btn" href="AdminAdd.html"><div class="sec white white-text" style="margin: 15px; padding: 40px;border: 2px solid white; border-radius: 20px; font-size: 20px; background: linear-gradient(to right, #AF6568, #FA797F);"><font color="white"><center>Categories</center></font></div></a>		
+            <a class="dash-btn" href="StockMain.html"><div class="sec white white-text" style="margin: 15px; padding: 40px;border: 2px solid white; border-radius: 20px; font-size: 20px; background: linear-gradient(to right, #AF6568, #FA797F);"><font color="white"><center>Stock</center></font></div></a>
+		    <a class="dash-btn" href="Supplier.html"><div class="sec white white-text" style="margin: 15px; padding: 40px;border: 2px solid white; border-radius: 20px; font-size: 20px; background: linear-gradient(to right, #AF6568, #FA797F);"><font color="white"><center>Supplier Details</center></font></div></a>
+		</div>
+	</div>
+</div>
+<div id="footer1"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Order</title>
+</head>
+<style>
+ body
+	{
+	     background-image: url('b.jfif');
+	     background-repeat: no-repeat;
+	     background-attachment: fixed;
+		 background-size: cover;
+	}
+table {
+  width:50%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#header3').load('f2.html');
+	$('#header2').load('UserNav.html');
+});
+</script>
+<body>
+<div id="header3"></div>
+<div id="header2"></div>
+<h1 align="center">PLACE ORDER</h1>
+<form action="OverAllBooks" method="get">
+ <table align="center" width="550px" border="1" >
+    <tr>
+      <td align="right">Name:</td>
+      <td align="left"><input type="text" name="name" /></td>
+    </tr>
+    <tr>
+      <td align="right">Item Name:</td>
+      <td align="left"><input type="text" name="item" /></td>
+    </tr>
+    <tr>
+      <td align="right">Quantity:</td>
+      <td align="left"><input type="text" name="qty" /></td>
+    </tr>
+    <tr>
+      <td align="right">Place of Delivery:</td>
+      <td align="left"><input type="text" name="place" /></td>
+    </tr>
+  </table>
+ <center><input type="submit" name="order" value="Make Order"/></center>
+</form>
+</body>
+</html>

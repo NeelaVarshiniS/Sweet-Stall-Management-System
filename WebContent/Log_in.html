@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Login page</title>
+<style type="text/css">
+    body
+	{
+	     background-image: url('img15.jpg');
+	     background-repeat: no-repeat;
+	     background-attachment: fixed;
+		 background-size: cover;
+	}
+.form-control {
+ margin: 1rem 0;
+}
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 20%;
+  margin-bottom: 0.25rem;
+  margin-left: 41rem;
+}
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #00695c;
+}
+.btn
+{
+margin-left: 41rem;}
+</style>
+<link href="navigation.html" rel="import" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#header3').load('f2.html');
+	$('#header2').load('navigation.html');
+});
+</script>
+</head>
+<body background="logimg.jpg">
+<div id="header3"></div>
+<div id="header2"></div>
+<div>
+<h1 align="center" >USER LOGIN</h1>
+<form class="login-form" method="POST" action="Log_in" name="Register" onSubmit="return(validates());">
+            <div class="form-control">
+                <label for="email">E-Mail</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <a href="UserPage.html"><button class="btn" type="submit" id="sub3">Login</button></a>
+        </form>
+        <div ><br>
+            <a class="btn" href="/reset">Reset Password</a>
+        </div>
+</div>
+<script>
+function validates()
+{
+   var alpha=/^[a-zA-Z\s-,]+$/;
+   var email = document.Register.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email==" " || atpos < 1 || ( dotpos - atpos < 2 ))
+ {
+     alert("Please enter correct email ID")
+     document.Register.emailid.focus() ;
+     return false;
+ }
+if( document.Register.password.value == "" )
+   {
+     alert( "Please provide Password!" );
+     document.Register.checkin.focus() ;
+     return false;
+   }
+   return( true );
+}
+</script>
+</body>
+</html>

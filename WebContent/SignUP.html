@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>USER SIGNUP</title>
+<link rel="stylesheet" href="style.css">
+<style type="text/css">
+ body
+	{
+	     background-image: url('img13.jpg');
+	     background-repeat: no-repeat;
+	     background-attachment: fixed;
+		 background-size: cover;
+	}
+.form-control {
+ margin: 1rem 0;
+}
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 20%;
+  margin-bottom: 0.25rem;
+  margin-left: 41rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #00695c;
+}
+.btn
+{
+  margin-left: 41rem;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#header3').load('f2.html');
+	$('#header2').load('navigation.html');
+});
+</script>
+</head>
+<body>
+<div>
+<div id="header3"></div>
+<div id="header2"></div>
+<h1 align="center">USER SIGNUP</h1>
+<form class="login-form" action="SignUp" method="POST">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-control">
+                <label for="email">E-Mail</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+             <div class="form-control">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" required>
+           </div>
+            <div class="form-control">
+                <label for="address">Phone Number</label>
+                <input type="text" name="phnum" id="phnum" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <a href="UserPage"><button class="btn" type="submit">Signup</button></a>
+        </form>
+</div>
+<script>
+function validates()
+{
+   var alpha=/^[a-zA-Z\s-,]+$/;
+   if( document.Register.name.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.Register.name.focus() ;
+     return false;
+   }
+   if( !document.Register.name.value.match(alpha) )
+   {
+     alert( "Please provide correct name!" );
+     document.Register.name.focus() ;
+     return false;
+   }
+ var email1 = document.Register.email.value;
+  atpos = email1.indexOf("@");
+  dotpos = email1.lastIndexOf(".");
+ if (email1==" " || atpos < 1 || ( dotpos - atpos < 2 ))
+ {
+     alert("Please enter correct email ID")
+     document.Register.email.focus() ;
+     return false;
+ }
+ if( document.Register.address.value == "" )
+ {
+   alert( "Please provide your Personal Address!" );
+   document.Register.address.focus() ;
+   return false;
+ }    
+ if( !document.Register.address.value.match(alpha) )
+ {
+   alert( "Please provide correct address!" );
+   document.Register.address.focus() ;
+   return false;
+ }
+  if( document.Register.phnum.value == "" ||
+           isNaN( document.Register.phnum.value) ||
+           document.Register.phnum.value.length != 10 )
+   {
+     alert( "Please provide a Mobile No in the format 123." );
+     document.Register.phnum.focus() ;
+     return false;
+   }
+  if( document.Register.password.value == "" )
+  {
+    alert( "Please provide Password!" );
+    document.Register.password.focus() ;
+    return false;
+  }
+   return( true );
+}
+document.getElementById("id1").onclick=function(){location.href="frame3.html"};
+</script>
+</body>
+</html>

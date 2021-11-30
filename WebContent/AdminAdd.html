@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Category List</title>
+<style>
+        #candidate {
+            border-radius: 20%;
+            border-color: aquamarine;
+            box-sizing: border-box;
+        }
+          
+        .buttonClass {
+            border-radius: 20%;
+            border-color: aqua;
+            border-style: inherit;
+        }
+          
+        button:hover {
+            background-color: green;
+        }
+        .listing {
+  list-style: none;
+  margin: 2em;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+}
+.listing li {
+  border: 1px solid #ffe066;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.listing .cta {
+  margin-top: auto;
+  border-top: 1px solid #ffe066;
+  padding: 10px;
+  text-align: center;
+}
+.listing .body {
+  padding: 10px;
+}
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#header1').load('f2.html');
+	$('#header2').load('AdminNavigation.html');
+	$('#footer1').load('categories.html');
+});
+</script>
+</head>
+<body bgcolor="SkyBlue">
+<div id="header1"></div>
+<div id="header2"></div>
+<TABLE id="dataTable" width="550px" border="1" align="center">
+	   <Thead>
+	     <TR>
+			<TH>S.NO</TH>
+			<TH> CATEGORY </TH>
+			<TH> DESCRIPTION </TH>
+			</TR>
+		</Thead>
+		<tbody>
+		<TR>
+			<TD>1</TD>
+			<TD> Sweets</TD>
+			<TD> This contains various variety of sweets which are very delicious and healthy. </TD>
+		</TR>
+		<TR>
+			<TD>2</TD>
+			<TD> Savories</TD>
+			<TD> This contains various variety of savories which are very delicious and healthy. </TD>
+		</TR>
+		<TR>
+			<TD>3</TD>
+			<TD> Cookies</TD>
+			<TD> This contains various variety of cookies which are very delicious and healthy. </TD>
+		</TR>
+		<TR>
+			<TD>4</TD>
+			<TD> Kadali Mittai</TD>
+			<TD> This contains various variety of kadali mittai which are very delicious and healthy. </TD>
+		</TR>
+		<TR>
+			<TD>5</TD>
+			<TD> Then Nelli</TD>
+			<TD> This contains various variety of then nelli which are very delicious and healthy. </TD>
+		</TR>
+		</tbody>
+	</TABLE>
+<div align="center">
+<form>
+	<a href="addBooks.html"><INPUT type="button" value="Add Category"/></a>
+
+	<a href="Delete_Taken.html"><INPUT type="button" value="Delete Category" onclick="deleteRow('dataTable')" /></a>
+</form>
+</div>
+
+</body>
+</html>

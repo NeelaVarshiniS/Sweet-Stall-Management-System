@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sweet Variety</title>
+<style>
+body
+	{
+	     background-image: url('sw.jpeg');
+	     background-repeat: no-repeat;
+	     background-attachment: fixed;
+		 background-size: cover;
+	}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+
+  display: flex; /* so child elements can use flexbox stuff too! */
+}
+.product-info {
+  margin-top: auto;
+}
+@media (max-width: 600px) {
+  .product-card {
+    flex: 1 46%;
+  }
+}
+.listing {
+  list-style: none;
+  margin: 2em;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+}
+.listing li {
+  border: 1px solid #ffe066;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.listing .cta {
+  margin-top: auto;
+  border-top: 1px solid #ffe066;
+  padding: 10px;
+  text-align: center;
+}
+.listing .body {
+  padding: 10px;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  width: 40%;
+}
+
+.card__header,
+.card__content {
+  padding: 1rem;
+}
+
+.card__header h5,
+.card__content h5,
+.card__content h6,
+.card__content p {
+  margin: 0;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__image img {
+  width: 100%;
+}
+
+.card__actions {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__actions button,
+.card__actions a {
+  margin: 0 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  font: inherit;
+  border: 1px solid #00695c;
+  color: #00695c;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #00695c;
+  color: white;
+}
+
+.btn.danger {
+  color: red;
+  border-color: red;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+  background: red;
+  color: white;
+}
+.t{
+text-align: center;
+font-size:15px;}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#header3').load('f2.html');
+	$('#header2').load('UserNav.html');
+});
+</script>
+</head>
+<body>
+<div id="header3"></div>
+<div id="header2"></div>
+<ul class="listing">
+  <li>
+    <h2>JELABI</h2>
+    <div class="body">
+    <p><img src="jel.jpg" width="70%"></img></p>
+    <p>COST:150</p>
+    <p>AVAILABLE:5kg</p></div>
+    <div class="cta"><a href="Order.html">ORDER</a></div>
+  </li>
+   <li>
+     <h2>RASAGULA</h2>
+     <div class="body"><p><img src="ras.png" width="70%"></img></p>
+     <p>COST:150</p>
+     <p>AVAILABLE:6kg</p></div>
+     <div class="cta"><a href="Order.html">ORDER</a></div>
+   </li>
+   <li class="wide">
+     <h2>LADDUU</h2>
+     <div class="body"><p><img src="lad.jpeg" width="70%"></img></p>
+     <p>COST:150</p>
+     <p>Available:5kg</p></div>
+     <div class="cta"><a href="Order.html">ORDER</a></div>
+    </li>
+    <li>
+     <h2>PALKOVA</h2>
+     <div class="body"><p><img src="pal.jpg" width="70%"></img></p>
+     <p>COST:150</p>
+     <p>AVAILABLE:6kg</p></div>
+     <div class="cta"><a href="Order.html">ORDER</a></div>
+    </li>
+     <li>
+      <h2>MAISURPA</h2>
+     <div class="body"><p><img src="mai.jpeg" width="70%"></img></p>
+     <p>COST:150</p>
+     <p>AVAILABLE:5kg</p></div>
+      <div class="cta"><a href="Order.html">ORDER</a></div>
+    </li>
+</ul></body>
+</html>
